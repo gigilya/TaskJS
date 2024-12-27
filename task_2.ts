@@ -1,8 +1,8 @@
 //Написать функцию, которая на вход принимает строку и возвращает длину самого длинного слова в этой строке
 
-function maxWord(inputString) {
-  const words = inputString.split(' ');
-  let maxLength = 0;
+function maxWord(inputString: string) {
+  const words: string[] = inputString.split(' ');
+  let maxLength: number = 0;
 
   for (const word of words) {
     if (word.length > maxLength) {
@@ -12,4 +12,6 @@ function maxWord(inputString) {
   return maxLength;
 }
 
-max('Hello world');
+const lineString: string = 'Hello world';
+
+console.log(maxWord(lineString));
