@@ -1,11 +1,9 @@
 // Написать функцию, которая на вход принимает целое число и возвращает факториал этого числа
 
-//export {};
 function factorial(integer: number) {
   let fact: number = 1;
-  let i: number = 1;
 
-  for (; integer + 1 > i; i++) {
+  for (let i = 1; integer + 1 > i; i++) {
     fact *= i;
   }
   return fact;
