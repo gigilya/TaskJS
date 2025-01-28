@@ -10,10 +10,6 @@ function dropElements(arr: any[], func: (val: any) => boolean) {
   return arr.slice(i);
 }
 
-// input
-// const arr: any[] = [1, 2, 3, 4];
-// const func = (n: number) => n >= 3;
-// console.log(dropElements(arr, func));
-
-// output
-// [ 3, 4 ]
+console.log(dropElements([1, 2, 3, 4], (n: number) => n >= 3));  //[3, 4] 
+console.log(dropElements(["a", "b", "b1"], (n: string) => n == 'b'));  //[3, 4] 
+console.log(dropElements([1, 2, 1, 1, 1], (n: number) => n > 1));  //[2, 1, 1, 1] 

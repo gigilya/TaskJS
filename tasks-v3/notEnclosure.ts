@@ -14,9 +14,6 @@ function notEnclosure(arr: any[]): any[] {
   return flattenedArray;
 }
 
-// input
-// const arr: any[] = [[1], ['a'],[[4]], '4'];
-// console.log(notEnclosure(arr));
-
-// output
-// [ 1, 'a', 4, '4' ]
+console.log(notEnclosure([1, [2, 3, 4]]));  //[1, 2, 3, 4]
+console.log(notEnclosure(["a", ["b", ["b1"]]]));  //["a", "b", "b1"] 
+console.log(notEnclosure([1, [2, 1, 1], 1]));  //[1, 2, 1, 1, 1] 

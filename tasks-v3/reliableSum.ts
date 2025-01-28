@@ -10,8 +10,6 @@ function reliableSum(a: number, b?: number): number | ((b: number) => number) {
   return a + b;
 }
 
-// input
-// console.log(reliableSum(4, 2));
-
-// output
-// 6
+console.log(reliableSum(1, 2));  //3
+console.log(reliableSum(5));  //(c) => {return a + c;} 
+console.log(reliableSum(4, 4));  //8

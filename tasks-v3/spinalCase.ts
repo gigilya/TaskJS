@@ -7,9 +7,6 @@ function spinalCase(str: string): string {
     .replace(/\s+|_+/g, "-");
 }
 
-// input
-// const str: string = "string STRING";
-// console.log(spinalCase(str));
-
-// output
-// string-string
+console.log(spinalCase("Hello hello"));  //"hello-hello" 
+console.log(spinalCase("HELLO 12 worD"));  //"hello-12-wor-d"
+console.log(spinalCase("he ll o"));  //"he-ll-o"

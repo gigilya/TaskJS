@@ -5,9 +5,6 @@ function deleteValue(arr: any[], ...args: any[]): any[] {
   return arr.filter((item) => !args.includes(item));
 }
 
-// input
-// const arr: any[] = [1, 'a', 4, '4'];
-// console.log(deleteValue(arr, 1, 4));
-
-// output
-// [ 'a', '4' ]
+console.log(deleteValue([1, 2, 3, 4], 4, 3, 2, 1));  //[]
+console.log(deleteValue(["a" , "b", "b1"], "b"));  //["a", "b1"] 
+console.log(deleteValue([1, 1, 1, 1, 1], 2));  //[1, 1, 1, 1, 1]

@@ -7,31 +7,41 @@ function replay(
   collection: Record<string, any>[],
   source: Record<string, any>
 ) {
-  if (
-    !Array.isArray(collection) ||
-    typeof source !== "object" ||
-    source === null
-  )
-    return collection.filter((obj) =>
-      Object.keys(source).every(
-        (key) => obj.hasOwnProperty(key) && obj[key] === source[key]
-      )
-    );
+  return collection.filter((obj) =>
+    Object.keys(source).every(
+      (key) => obj.hasOwnProperty(key) && obj[key] === source[key]
+    )
+  );
 }
 
-// input
-// const collection = [
-//   { apple: 1, bat: 2 },
-//   { apple: 1 },
-//   { apple: 1, bat: 2, cookie: 2 },
-//   { bat: 2 },
-// ];
+const collection = [
+  { apple: 1, bat: 2 },
+  { apple: 1 },
+  { apple: 1, bat: 2, cookie: 2 },
+  { bat: 2 },
+];
+const collection1 = [
+  { apple: 2, bat: 2 },
+  { apple: 2 },
+  { apple: 1, bat: 2, cookie: 2 },
+  { bat: 2 },
+];
 
-// const source = { apple: 1, bat: 2 };
-// console.log(replay(collection, source));
+const source = { apple: 1, bat: 2 };
+const source1 = { apple: 2, bat: 2 };
 
-// output
-//[
-//  { "apple": 1, "bat": 2 },
-//  { "apple": 1, "bat": 2, "cookie": 2 }
-//]
+console.log(replay(collection, source));  
+// [{
+//   "apple": 1,
+//   "bat": 2
+// }, {
+//   "apple": 1,
+//   "bat": 2,
+//   "cookie": 2
+// }] 
+
+console.log(replay(collection1, source1));
+// [{
+//   "apple": 2,
+//   "bat": 2
+// }]

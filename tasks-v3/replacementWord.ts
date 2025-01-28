@@ -12,9 +12,6 @@ function replacementWord(str: string, before: string, after: string): string {
   return str.replace(before, after);
 }
 
-// input
-// const str1: string = "black white";
-// console.log(replacementWord(str1, "black", "white1"));
-
-// output
-// white1 white
+console.log(replacementWord("Hello world", "Hello", "Goodbye"));  //"Goodbye world" 
+console.log(replacementWord("Hello world", "world", "Goodbye"));  //"Hello goodbye" 
+console.log(replacementWord("Hello world", "Goodbye", "Goodbye"));  //"Hello world"

@@ -8,10 +8,6 @@ function searchArray(arr1: any[], arr2: any[]): any[] {
   );
 }
 
-// input
-// const arr1: any[] = [1, 2, 3, 5];
-// const arr2: any[] = [1, 2, 3, 4];
-// console.log(searchArray(arr1, arr2));
-
-// output
-// [ 5, 4 ]
+console.log(searchArray([1, 2, 3, 4], [1, 2, 4, 4]));  //[3]
+console.log(searchArray([3, 3, 3, 4], [4, 4, 4, 4]));  //[3, 3, 3] 
+console.log(searchArray([3, 8, 5, 4], [4, 1, 10, 4]));  //[3, 8, 5, 1, 10]
