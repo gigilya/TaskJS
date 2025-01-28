@@ -2,15 +2,18 @@
 // а затем возвращает оставшуюся часть массива. Например:
 // dropElements([1, 2, 3, 4], function(n) {return n >= 3;}) должна вернуть [3, 4].
 
-function dropElements(arr: any[]): any[] {
-  const flattenedArray: any[] = [];
-  function flatten(item: any) {
-    if (Array.isArray(item)) {
-      item.forEach(flatten);
-    } else {
-      flattenedArray.push(item);
-    }
+function dropElements(arr: any[], func: (val: any) => boolean) {
+  let i = 0;
+  while (i < arr.length && !func(arr[i])) {
+    i++;
   }
-  arr.forEach(flatten);
-  return flattenedArray;
+  return arr.slice(i);
 }
+
+// input
+// const arr: any[] = [1, 2, 3, 4];
+// const func = (n: number) => n >= 3;
+// console.log(dropElements(arr, func));
+
+// output
+// [ 3, 4 ]

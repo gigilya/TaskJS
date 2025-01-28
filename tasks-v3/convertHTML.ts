@@ -9,3 +9,10 @@ function convertHTML(str: string): string {
   };
   return str.replace(/[&<>"']/g, (char) => htmlEntities[char]);
 }
+
+// input
+// const str: string = "<>";
+// console.log(convertHTML(str))
+
+// output
+// &lt;&gt;

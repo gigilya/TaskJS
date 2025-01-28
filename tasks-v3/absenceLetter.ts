@@ -10,3 +10,10 @@ function absenceLetter(str: string): string | undefined {
   }
   return undefined;
 }
+
+// input
+// const str: string = "acd";
+// console.log(absenceLetter(str))
+
+// output
+// b

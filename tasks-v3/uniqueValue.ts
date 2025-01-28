@@ -12,3 +12,11 @@ function uniqueValue(...arrs: any[][]): any[] {
   });
   return combined;
 }
+
+// input
+// const arr1: any[] = [1, 2, 3, 5];
+// const arr2: any[] = [1, 2, 3];
+// console.log(uniqueValue(arr1, arr2));
+
+// output
+// [ 1, 2, 3, 5 ]

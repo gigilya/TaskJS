@@ -6,17 +6,32 @@
 function replay(
   collection: Record<string, any>[],
   source: Record<string, any>
-): Record<string, any>[] {
+) {
   if (
     !Array.isArray(collection) ||
     typeof source !== "object" ||
     source === null
-  ) {
-    throw new Error("Неправильные типы аргументов.");
-  }
-  return collection.filter((obj) =>
-    Object.keys(source).every(
-      (key) => obj.hasOwnProperty(key) && obj[key] === source[key]
-    )
-  );
+  )
+    return collection.filter((obj) =>
+      Object.keys(source).every(
+        (key) => obj.hasOwnProperty(key) && obj[key] === source[key]
+      )
+    );
 }
+
+// input
+// const collection = [
+//   { apple: 1, bat: 2 },
+//   { apple: 1 },
+//   { apple: 1, bat: 2, cookie: 2 },
+//   { bat: 2 },
+// ];
+
+// const source = { apple: 1, bat: 2 };
+// console.log(replay(collection, source));
+
+// output
+//[
+//  { "apple": 1, "bat": 2 },
+//  { "apple": 1, "bat": 2, "cookie": 2 }
+//]

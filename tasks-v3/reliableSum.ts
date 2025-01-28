@@ -9,3 +9,9 @@ function reliableSum(a: number, b?: number): number | ((b: number) => number) {
   }
   return a + b;
 }
+
+// input
+// console.log(reliableSum(4, 2));
+
+// output
+// 6

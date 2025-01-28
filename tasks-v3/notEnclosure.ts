@@ -13,3 +13,10 @@ function notEnclosure(arr: any[]): any[] {
   arr.forEach(flatten);
   return flattenedArray;
 }
+
+// input
+// const arr: any[] = [[1], ['a'],[[4]], '4'];
+// console.log(notEnclosure(arr));
+
+// output
+// [ 1, 'a', 4, '4' ]

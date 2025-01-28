@@ -9,3 +9,10 @@ function sumLimit(arr: number[]): number {
   }
   return sum;
 }
+
+// input
+// const arr: number[] = [1, 5];
+// console.log(sumLimit(arr));
+
+// output
+// 15
